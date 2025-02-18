@@ -16,13 +16,13 @@ const mocgarden = {
   expires_date: "2099-12-18T01:04:17Z",
   grace_period_expires_date: null,
   unsubscribe_detected_at: null,
-  original_purchase_date: new Date(Date.now() - 1000).toISOString(),
-  purchase_date: new Date(Date.now() - 2000).toISOString(),
+  original_purchase_date: "2025-01-01T01:04:18Z",
+  purchase_date: "2025-01-01T01:04:17Z",
   store: "app_store",
 };
 const mthunz = {
   grace_period_expires_date: null,
-  purchase_date: new Date(Date.now() - 2000).toISOString(),
+  purchase_date: "2025-01-01T01:04:17Z",
   product_identifier: "com.mocgarden.premium.yearly",
   expires_date: "2099-12-18T01:04:17Z",
 };
