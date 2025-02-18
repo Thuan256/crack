@@ -1,9 +1,9 @@
-const version = "V1.0.2";
+const headers = $request.headers;
 
-function setHeaderValue(e, a, d) {
-  var r = a.toLowerCase();
-  r in e ? (e[r] = d) : (e[a] = d);
-}
-var modifiedHeaders = $request.headers;
+const key = "X-RevenueCat-ETag";
+const lkey = key.toLocaleLowerCase();
 
-setHeaderValue(modifiedHeaders, "X-RevenueCat-ETag", ""), $done({ headers: modifiedHeaders });
+if (lkey in headers) headers[lkey] = "";
+else headers[key] = "";
+
+$done({ headers });
