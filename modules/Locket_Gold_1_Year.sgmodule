@@ -1,0 +1,9 @@
+#!name=MOC_Locket_Gold
+#!desc=Made By Cam
+
+[Script]
+revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/Thuan256/crack/main/js/locket1y.js, requires-body=true, max-size=-1, timeout=60
+deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/Thuan256/crack/main/js/deleteHeader.js, timeout=60
+
+[MITM]
+hostname = %APPEND% api.revenuecat.com
