@@ -8,23 +8,28 @@ const obj = JSON.parse($response.body);
 
 obj.Attention = "Cảm ơn bạn đã sử dụng dịch vụ của MOC Garden!";
 
+const now = new Date();
+const year = now.getFullYear();
+const month = `${now.getMonth() + 1}`.padStart(2, "0");
+const day = `${now.getDate()}`.padStart(2, "0");
+
 const mocgarden = {
     is_sandbox: !1,
     ownership_type: "PURCHASED",
     billing_issues_detected_at: null,
     period_type: "normal",
-    expires_date: "2099-12-18T01:04:17Z",
+    expires_date: `${year + 74}-${month}-${day}T01:04:17Z`,
     grace_period_expires_date: null,
     unsubscribe_detected_at: null,
-    original_purchase_date: "2025-01-01T01:04:18Z",
-    purchase_date: "2025-01-01T01:04:17Z",
+    original_purchase_date: `${year}-${month}-${day}T01:04:18Z`,
+    purchase_date: `${year}-${month}-${day}T01:04:17Z`,
     store: "app_store",
 };
 const mthunz = {
     grace_period_expires_date: null,
-    purchase_date: "2025-01-01T01:04:17Z",
+    purchase_date: `${year}-${month}-${day}T01:04:17Z`,
     product_identifier: "com.mocgarden.premium.yearly",
-    expires_date: "2099-12-18T01:04:17Z",
+    expires_date: `${year + 74}-${month}-${day}T01:04:17Z`,
 };
 
 const match = Object.keys(mapping).find((e) => headers.includes(e));
