@@ -9,27 +9,27 @@ const obj = JSON.parse($response.body);
 obj.Attention = "Cảm ơn bạn đã sử dụng dịch vụ của MOC Garden!";
 
 const now = new Date();
-const _1ylatter = new Date();
-
-_1ylatter.setFullYear(now.getFullYear() + 1);
+const year = now.getFullYear();
+const month = `${now.getMonth() + 1}`.padStart(2, "0");
+const day = `${now.getDate()}`.padStart(2, "0");
 
 const mocgarden = {
     is_sandbox: !1,
     ownership_type: "PURCHASED",
     billing_issues_detected_at: null,
     period_type: "normal",
-    expires_date: _1ylatter.toISOString(),
+    expires_date: `${year + 1}-${month}-${day}T01:04:17Z`,
     grace_period_expires_date: null,
     unsubscribe_detected_at: null,
-    original_purchase_date: now.toISOString(),
-    purchase_date: now.toISOString(),
+    original_purchase_date: `${year}-${month}-${day}T01:04:18Z`,
+    purchase_date: `${year}-${month}-${day}T01:04:17Z`,
     store: "app_store",
 };
 const mthunz = {
     grace_period_expires_date: null,
-    purchase_date: now.toISOString(),
+    purchase_date: `${year}-${month}-${day}T01:04:17Z`,
     product_identifier: "com.mocgarden.premium.yearly",
-    expires_date: _1ylatter.toISOString(),
+    expires_date: `${year + 1}-${month}-${day}T01:04:17Z`,
 };
 
 const match = Object.keys(mapping).find((e) => headers.includes(e));
