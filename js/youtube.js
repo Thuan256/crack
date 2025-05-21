@@ -5645,8 +5645,8 @@
                 l.done();
         } else
             w.msg(
-                "YouTube Premium đã được kích hoạt",
-                "Cam đã Premium đã được kích hoạt",
+                "YouTube Premium",
+                "Script collected by Cam",
             ),
                 w.exit();
     }
