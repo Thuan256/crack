@@ -9,9 +9,9 @@ const obj = JSON.parse($response.body);
 obj.Attention = "Cảm ơn bạn đã sử dụng dịch vụ của MOC Garden!";
 
 const now = new Date();
-const year = now.getFullYear();
-const month = `${now.getMonth() + 1}`.padStart(2, "0");
-const day = `${now.getDate()}`.padStart(2, "0");
+const year = 2007; // now.getFullYear();
+const month = 6; //`${now.getMonth() + 1}`.padStart(2, "0");
+const day = 25; // `${now.getDate()}`.padStart(2, "0");
 
 const mocgarden = {
     is_sandbox: !1,
